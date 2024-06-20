@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Age calculator app</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; position: fixed; bottom: 1rem;}
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body class="flex justify-content-center align-items-center">
+
+  <div class="container flex column justify-content-space align-items-center">
+
+    <div class="input flex">
+
+      <div class="day">
+        <p class="day-string">Day</p>
+        <input type="number" name="day" id="day" class="day-input" placeholder="DD" min="1" max="31">
+        <p class="error day-error"></p>
+      </div>
+      <div class="month">
+        <p class="month-string">Month</p>
+        <input type="number" name="month" id="month" class="month-input" placeholder="MM" min="1" max="12">
+        <p class="error month-error"></p>
+      </div>
+      <div class="year">
+        <p class="year-string">Year</p>
+        <input type="number" name="year" id="year" class="year-input" placeholder="YYYY" min="1900">
+        <p class="error year-error"></p>
+      </div>
+
+    </div>
+
+    <hr><button id="calculate-date"></button></hr>
+
+    <div class="result flex column justify-content-center">
+      <p class="date-results"><b id="year-results">--</b>years</p>
+      <p class="date-results"><b id="month-results">--</b>month</p>
+      <p class="date-results"><b id="day-results">--</b>days</p>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+
+  
+<div class="attribution">
+  Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+  Coded by <a href="https://github.com/ALtera21">notAltera</a>.
+</div>
+
+</body>
+</html>
+

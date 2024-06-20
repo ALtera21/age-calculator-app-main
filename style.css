@@ -1,0 +1,183 @@
+@font-face {
+    font-family: PopB;
+    src: url("assets/fonts/Poppins-Bold.ttf");
+}
+
+@font-face {
+    font-family: PopBI;
+    src: url("assets/fonts/Poppins-BoldItalic.ttf");
+}
+
+@font-face {
+    font-family: PopXB;
+    src: url("assets/fonts/Poppins-ExtraBold.ttf");
+}
+
+@font-face {
+    font-family: PopXBI;
+    src: url("assets/fonts/Poppins-ExtraBoldItalic.ttf");
+}
+
+@font-face {
+    font-family: PopI;
+    src: url("assets/fonts/Poppins-Italic.ttf");
+}
+
+@font-face {
+    font-family: Pop;
+    src: url("assets/fonts/Poppins-Regular.ttf");
+}
+
+:root{
+    --purple: hsl(259, 100%, 65%);
+    --light-red: hsl(0, 100%, 67%);
+    --off-white: hsl(0, 0%, 94%);
+    --light-gray: hsl(0, 0%, 86%);
+    --smokey-gray: hsl(0, 1%, 44%);
+    --off-black: hsl(0, 0%, 8%);
+}
+
+/* UTILITY CLASS */
+
+.flex{
+    display: flex;
+}
+
+.flex.column{
+    flex-direction: column;
+}
+
+.flex.justify-content-center{
+    justify-content: center;
+}
+
+.flex.align-items-center{
+    align-items: center;
+}
+
+.flex.justify-content-space{
+    justify-content: space-between;
+}
+
+/* UTILITY CLASS  END*/
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Pop;
+}
+
+body{
+    min-height: 100vh;
+    background-color: var(--light-gray);
+}
+
+.container{
+    position: relative;
+    width: 40rem;
+    height: 37rem;
+    padding: 2rem;
+    box-sizing: border-box;
+
+    background-color: white;
+    border-radius: 10% 10% 50% 10%;
+}
+
+/* INPUT */
+
+.input{
+    height: 25%;
+    gap: 2rem;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.day, .month, .year{
+    width: 27%;
+}
+
+.day-input, .month-input, .year-input{
+    border: 1px solid black;
+    border-radius: 0.5rem;
+    margin-top: 0.5rem;
+    width: 90%;
+    height: 40%;
+    padding-inline-start: 1rem;
+    font-family: PopXB;
+    font-size: 1.5rem;
+}
+
+.day-input:focus, .month-input:focus, .year-input:focus{
+    outline: 2px solid var(--purple);
+}
+
+.error{
+    font-size: 0.8rem;
+    color: red;
+    font-style: italic;
+}
+
+/* INPUT END */
+
+/* BUTTON */
+
+hr{
+    width: 100%;
+    position: relative;
+}
+
+#calculate-date{
+    width: 4rem;
+    height: 4rem;
+    position: absolute;
+    top: 29%;
+    right: 5%;
+    background-color: var(--purple); 
+    border: none;
+    border-radius: 50%;
+    background-image: url('assets/images/icon-arrow.svg');
+    background-position: center;
+    background-size: 2rem;
+    background-repeat: no-repeat;
+}
+
+#calculate-date:hover{
+    background-color: var(--off-black);
+    cursor: pointer;
+}
+
+/* BUTTON END */
+
+/* RESULTS */
+
+.result{
+    line-height: 5rem;
+    font-size: 5rem;
+
+    width: 90%;
+    height: 60%;
+}
+
+.date-results, b {
+    font-family: PopXBI;
+}
+
+b{
+    color: var(--purple);
+}
+
+/* RESULTS END*/
+
+@media(max-width: 484px){
+    .result{
+        font-size: 3rem;
+    }
+
+    #calculate-date{
+        right: 45%;
+    }
+}
